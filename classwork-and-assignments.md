@@ -4,7 +4,6 @@
 
 ## In-Class Work\
 
-## MTB
 
 ### Task 1 — Push Your Portfolio to GitHub (10 mins)
 
