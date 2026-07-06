@@ -2,7 +2,7 @@
 
 ---
 
-## In-Class Work
+## In-Class Work & Assignment
 
 ### Task 1 — Push Your Portfolio to GitHub (10 mins)
 
