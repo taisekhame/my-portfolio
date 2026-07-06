@@ -58,7 +58,7 @@ If you or a collaborator made changes on GitHub directly:
 git pull
 ```
 
-This fetches and merges the remote changes into your local branch or branches.
+This fetches and merges the remote changes into your local branch.
 
 ---
 
