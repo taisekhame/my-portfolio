@@ -1,0 +1,18 @@
+# _ASSETS NEEDED
+#
+# Add your image files to the images/ folder:
+#
+# images/hero-bg.jpg   — wide background photo for the hero section
+#                        Recommended: 1920x1080px, under 250KB
+#                        Source: https://unsplash.com or https://www.pexels.com
+#                        Compress at: https://tinypng.com
+#
+# images/profile.jpg   — your profile photo (needed from Class 3)
+#                        Recommended: 400x400px square, under 100KB
+#
+# images/project-placeholder.jpg — screenshot or placeholder for project cards
+#                        Recommended: 600x360px, under 150KB
+#                        Placeholder: https://picsum.photos/600/360
+#
+# IMPORTANT: File names are case-sensitive on GitHub Pages.
+# Use all lowercase with hyphens: hero-bg.jpg not Hero-BG.jpg

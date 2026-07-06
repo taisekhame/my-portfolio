@@ -1,0 +1,74 @@
+GIT & GITHUB COMMAND REFERENCE
+================================
+
+REMOTE SETUP
+─────────────
+git remote add origin URL        ← link local repo to GitHub
+git remote -v                    ← verify remote connections
+git branch -M main               ← rename branch to main
+
+PUSH & PULL
+────────────
+git push -u origin main          ← first push (sets default)
+git push                         ← subsequent pushes
+git pull                         ← fetch + merge from remote
+git fetch                        ← download changes (don't merge)
+
+BRANCHING
+──────────
+git branch                       ← list all branches
+git branch feature-name          ← create a branch
+git switch feature-name          ← switch to branch (modern)
+git switch -c feature-name       ← create AND switch
+git checkout -b feature-name     ← old syntax (same result)
+
+git switch main                  ← go back to main
+git merge feature-name           ← merge branch into current
+git branch -d feature-name       ← delete merged branch
+git push origin feature-name     ← push branch to GitHub
+
+MERGE CONFLICTS
+────────────────
+When Git can't auto-merge:
+1. Open the file — look for <<<<<<< markers
+2. Edit to keep what you want
+3. Delete ALL the markers (<<<, ===, >>>)
+4. git add the resolved file
+5. git commit -m "Resolve merge conflict"
+
+Conflict markers look like:
+  <<<<<<< HEAD
+  your version
+  =======
+  their version
+  >>>>>>> feature-branch
+
+PULL REQUEST WORKFLOW
+──────────────────────
+1.  git switch -c feature-name
+2.  (make changes and commits)
+3.  git push origin feature-name
+4.  On GitHub: "Compare & pull request" button
+5.  Add title + description → Create pull request
+6.  Review → Merge pull request
+7.  git switch main && git pull   ← update local
+
+CHECKING EVERYTHING
+────────────────────
+git log --oneline --graph --all  ← visual branch history
+git remote -v                    ← check remote URL
+git status                       ← current working state
+git diff HEAD                    ← all changes since last commit
+
+COMMON MISTAKES
+────────────────
+Problem: "push rejected"
+  → git pull first, resolve any conflicts, then push
+
+Problem: committed sensitive file (.env with passwords)
+  → Do NOT push. Use git reset HEAD~1 to undo the commit.
+  → If already pushed: change the password immediately,
+    use git filter-branch or BFG to remove from history.
+
+Problem: "detached HEAD"
+  → git switch main   ← gets back to a branch
